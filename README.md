@@ -1,14 +1,7 @@
 # javascript
+[![eslint](https://github.com/Defirence/javascript/actions/workflows/eslint.yml/badge.svg?branch=main)](https://github.com/Defirence/javascript/actions/workflows/eslint.yml)
+
 A collection of JavaScript boilerplate templates, some basic configurations and hello-world projects as a portfolio.
-
-### Project Maintenance Support:
-
-Product subscriptions provided for free under the JetBrains OSS Program, which includes but is not limited to WebStorm.
-
-<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/WebStorm_icon.png" width="100" height="100" alt="webstorm icon">
-<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_square.png" width="100" height="100" alt="jetbrains logo">
-
-
 
 <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
   <a rel="license"
@@ -27,3 +20,9 @@ This work is published from:
       content="ZA" about="https://www.github.com/Defirence/javascript">
   South Africa</span>.
 </p>
+
+### Project Maintenance Support:
+
+Product subscriptions provided for free under the JetBrains OSS Program, which includes but is not limited to WebStorm.
+
+<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/WebStorm_icon.png" width="100" height="100" alt="webstorm icon"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_square.png" width="100" height="100" alt="jetbrains logo">
