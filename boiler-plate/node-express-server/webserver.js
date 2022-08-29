@@ -1,20 +1,41 @@
-//vars + const
 const express = require('express');
-let app = express();
-const port = 3000
+const app = express();
+const port = 3000;
+// user-agents DOES NOT READ the actual userAgent string.
+// it just generates random fucking userAgent strings.
 let userAgent = require('user-agents');
+const dir = '/user';
 
-//core
 app.get('/', (req, res) => {
-    res.send('Hello Express!')
+  res.send('Hello Express!');
+  console.log(`Received GET request to the API with userAgent:`);
+  console.log(userAgent.toString());
+});
+
+app.post('/', (req, res) => {
+  res.send('Received a POST request to the API...');
+  console.log(`Received POST request from port: ${port} to ${dir}userAgent:`)
+  console.log(userAgent.toString());
 })
 
-app.listen(port,() => {
-    console.log(`Listening on port ${port}`)
+app.put('/user', (req, res) => {
+  res.send('Received a PUT request to the API...')
+  console.log(`Received PUT request from port: ${port} to ${dir}userAgent:`)
+  console.log(userAgent.toString());
+})
+
+app.delete('/user', (req, res) => {
+  res.send('Received a DELETE request to the API...')
+  console.log(`Received DELETE request from port: ${port} to ${dir}userAgent:`)
+  console.log(userAgent.toString());
+})
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`)
 })
 
 app.use(() => {
-    console.log(userAgent)
+  console.log(userAgent)
 })
 
 //userAgentLogging
