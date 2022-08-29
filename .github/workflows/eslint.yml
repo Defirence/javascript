@@ -14,9 +14,8 @@ jobs:
         run: |
           git clone https://github.com/Defirence/javascript.git
           printf "List files and cd into repo dir on runner..."
-          cd boiler-plate/node-express-server
-          ls -lah
           echo $PWD
+          ls -lah
       - name: eslint
         run: |
           printf "Running eslint against webserver.js..."
