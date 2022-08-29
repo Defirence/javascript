@@ -7,12 +7,12 @@ on:
 name: eslint
 
 jobs:
-  pylint:
+  eslint:
     runs-on: ubuntu-22.04
     steps:
       - name: clone-branch
         run: |
-          git clone -b dev https://github.com/Defirence/javascript.git
+          git clone https://github.com/Defirence/javascript.git
           printf "List files and cd into repo dir on runner..."
           cd boiler-plate/node-express-server
           ls -lah
@@ -26,6 +26,5 @@ jobs:
           echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
           sudo apt-get install yarn -y
           yarn --version
-          yarn install
-          npx eslint webserver.js
+          yarn install && npx eslint webserver.js
           printf "Done running pylint checks, exiting ..."
