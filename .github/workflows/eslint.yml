@@ -26,4 +26,4 @@ jobs:
           sudo apt-get install yarn -y
           yarn --version
           yarn install && npx eslint webserver.js
-          printf "Done running pylint checks, exiting ..."
+          printf "\n[INFO] - Done running eslint checks but with "new-cap" rule disabled, exiting ..."
