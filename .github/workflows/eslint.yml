@@ -27,3 +27,5 @@ jobs:
           yarn --version
           yarn install && npx eslint webserver.js
           printf "\n[INFO] - Done running eslint checks but with "new-cap" rule disabled, exiting ..."
+# TODO: Chore: Add a stage to run yarn audit before installing packages.
+# TODO: Chore: Add Snyk dependency scanning locally + repo.
