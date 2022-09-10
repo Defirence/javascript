@@ -25,7 +25,9 @@ jobs:
           echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
           sudo apt-get install yarn -y
           yarn --version
-          yarn install && npx eslint webserver.js
+          yarn install && yarn audit && npx eslint webserver.js
           printf "\n[INFO] - Done running eslint checks but with "new-cap" rule disabled, exiting ..."
-# TODO: Chore: Add a stage to run yarn audit before installing packages.
-# TODO: Chore: Add Snyk dependency scanning locally + repo.
+# TODO: Chore: Add a step to use the $SNYK_TOKEN env var for the GitHub workflow.
+# TODO: Chore: Snyk allows for installation via the yarn.lock and then auth via the env var.
+# TODO: Feature: Consider having a separate step to scan with Snyk, and display an updated summary of security etc.
+# TODO: Feature: Add support for FOSSA scanning and displaying the data on README.md
