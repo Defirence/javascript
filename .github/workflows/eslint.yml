@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: clone-branch
         run: |
-          git clone https://github.com/Defirence/javascript.git
+          # git clone https://github.com/Defirence/javascript.git
           printf "List files and cd into repo dir on runner..."
           echo $PWD
           ls -lah
