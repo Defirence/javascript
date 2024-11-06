@@ -20,9 +20,3 @@ This work is published from:
       content="ZA" about="https://www.github.com/Defirence/javascript">
   South Africa</span>.
 </p>
-
-### Project Maintenance Support:
-
-Product subscriptions provided for free under the JetBrains OSS Program, which includes but is not limited to WebStorm.
-
-<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/WebStorm_icon.png" width="100" height="100" alt="webstorm icon"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_square.png" width="100" height="100" alt="jetbrains logo">
