@@ -14,12 +14,14 @@ jobs:
         run: |
           # git clone https://github.com/Defirence/javascript.git
           printf "List files and cd into repo dir on runner..."
-          echo $PWD
-          ls -lah
+          sleep 3
+          pwd
+          sleep 3
+          ls -lash
       - name: eslint
         run: |
           printf "Running eslint against webserver.js..."
-          cd /home/runner/work/javascript/javascript/boiler-plate/node-express-server/
+          # cd 
           sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install curl -y
           curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
           echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
