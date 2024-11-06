@@ -12,12 +12,8 @@ jobs:
     steps:
       - name: clone-branch
         run: |
-          # git clone https://github.com/Defirence/javascript.git
-          printf "List files and cd into repo dir on runner..."
-          sleep 3
-          pwd
-          sleep 3
-          ls -lash
+          git clone https://github.com/Defirence/javascript.git
+          pwd && ls -lash
       - name: eslint
         run: |
           printf "Running eslint against webserver.js..."
