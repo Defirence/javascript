@@ -16,7 +16,8 @@ jobs:
       #     pwd && ls -lash
     - name: Cache
       uses: actions/cache@v4.1.2
-      key: eslint_cache_main
+      with:
+        key: eslint_cache_main
     - name: eslint
       run: |
         sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install curl -y
