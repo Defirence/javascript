@@ -3,6 +3,7 @@ const app = express();
 const port = 3000;
 const UserAgents = require('user-agents');
 const userAgent = new UserAgents().toString();
+console.log(userAgent); // Add this to verify the value
 const dir = '/user';
 
 app.get('/', (req, res) => {
@@ -29,13 +30,11 @@ app.delete('/user', (req, res) => {
   console.log(userAgent.toString());
 });
 
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
-});
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
+  });
+}
 
-app.use(() => {
-  console.log(userAgent);
-});
-
-// userAgentLogging - fix this to not use new userAgent(); and rather pull the existing UA string.
-console.log(userAgent); // Logging the existing userAgent string
+// Export the app and userAgent for testing
+module.exports = { app, userAgent };
