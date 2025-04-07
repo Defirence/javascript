@@ -1,9 +1,8 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-// user-agents DOES NOT READ the actual userAgent string.
-// it just generates random userAgent strings.
-let userAgent = require('user-agents');
+const UserAgents = require('user-agents');
+const userAgent = new UserAgents().toString();
 const dir = '/user';
 
 app.get('/', (req, res) => {
@@ -38,6 +37,5 @@ app.use(() => {
   console.log(userAgent);
 });
 
-// userAgentLogging
-userAgent = new userAgent(); // eslint new-cap: "off"
-console.log(userAgent.toString()); // eslint new-cap: "off"
+// userAgentLogging - fix this to not use new userAgent(); and rather pull the existing UA string.
+console.log(userAgent); // Logging the existing userAgent string
