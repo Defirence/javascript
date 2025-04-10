@@ -7,13 +7,13 @@
   "author": "Defirence",
   "license": "CC0-Universal",
   "dependencies": {
-    "eslint": "^9.24.0",
     "express": "^5.1.0",
     "supertest": "^7.1.0",
     "user-agents": "^1.1.502"
   },
   "devDependencies": {
     "eslint-config-google": "^0.14.0",
+    "jshint": "^2.13.6",
     "mocha": "^11.1.0",
     "sinon": "^20.0.0"
   }

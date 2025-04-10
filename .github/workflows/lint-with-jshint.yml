@@ -1,0 +1,30 @@
+name: Lint with JSHint
+
+on:
+  push:
+    branches:
+      - 'main' # The main branch for production-ready code
+      - 'dev'  # The development branch for ongoing feature work
+      - 'tests' # A branch dedicated to testing purposes
+
+jobs:
+  lint:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        # No additional parameters are needed as this step simply checks out the repository
+
+      - name: Set up Node.js and Yarn
+        uses: actions/setup-node@v3
+        with:
+          # Using Node.js version 20 for compatibility with the project dependencies and JSHint.
+          node-version: '20'
+          # Caches dependencies for Yarn to speed up workflow execution
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run JSHint
+        run: npx jshint webserver.js --show-non-errors
