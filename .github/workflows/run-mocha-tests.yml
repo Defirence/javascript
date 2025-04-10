@@ -23,9 +23,9 @@ jobs:
                 cache: 'yarn'
 
             - name: Install dependencies
-              working-directory: javascript/node-express-server
+              working-directory: node-express-server
               run: yarn install
 
             - name: Run Mocha tests
-              working-directory: javascript/node-express-server
+              working-directory: node-express-server
               run: npx mocha test/webserver.test.js
