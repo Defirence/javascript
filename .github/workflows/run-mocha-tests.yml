@@ -25,16 +25,17 @@ jobs:
                 cache: 'yarn'
 
             - name: Verify `yarn.lock` exists
+              working-directory: node-express-server
               run: |
-                if [ ! -f node-express-server/yarn.lock ]; then
+                if [ ! -f yarn.lock ]; then
                   echo "Error: yarn.lock file is missing in node-express-server directory"
                   exit 1
                 fi
 
             - name: Install dependencies
-              run: yarn install
               working-directory: node-express-server
+              run: yarn install
 
             - name: Run Mocha tests
-              run: npx mocha test/webserver.test.js
               working-directory: node-express-server
+              run: npx mocha test/webserver.test.js
