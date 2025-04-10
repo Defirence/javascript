@@ -1,7 +1,8 @@
 # javascript
-[![eslint](https://github.com/Defirence/javascript/actions/workflows/eslint.yml/badge.svg?branch=main)](https://github.com/Defirence/javascript/actions/workflows/eslint.yml)
 
-A collection of JavaScript boilerplate templates, some basic configurations and hello-world projects as a portfolio.
+Random JavaScript stuff for fun. :)
+
+[![Mocha Tests](https://github.com/Defirence/javascript/actions/workflows/run-mocha-tests.yml/badge.svg)](https://github.com/Defirence/javascript/actions/workflows/run-mocha-tests.yml) [![Lint JSHint](https://github.com/Defirence/javascript/actions/workflows/lint-with-jshint.yml/badge.svg)](https://github.com/Defirence/javascript/actions/workflows/lint-with-jshint.yml)
 
 <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
   <a rel="license"
