@@ -15,14 +15,22 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v3
+              with:
+                # Specify the subdirectory path where the repository should be checked out
+                path: node-express-server      
 
             - name: Set up Node.js
               uses: actions/setup-node@v3
               with:
+                # Using Node.js version 20 for compatibility with the project dependencies and JSHint.
                 node-version: '20'
+                # Caches dependencies for Yarn to speed up workflow execution
+                cache: 'yarn'
 
             - name: Install dependencies
-              run: npm install
+              run: yarn install
+              working-directory: node-express-server
 
             - name: Run Mocha tests
               run: npx mocha test/webserver.test.js
+              working-directory: node-express-server
