@@ -1,0 +1,13 @@
+{
+  "esversion": 6,
+  "node": true,
+  "browser": true,
+  "globals": {
+    "describe": true,
+    "it": true,
+    "before": true,
+    "after": true
+  },
+  "undef": true,
+  "unused": true
+}
