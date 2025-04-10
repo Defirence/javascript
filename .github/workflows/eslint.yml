@@ -11,15 +11,17 @@ jobs:
   eslint:
     runs-on: ubuntu-22.04
     steps:
-      - name: clone-branch
-        run: |
-          git clone https://github.com/Defirence/javascript.git
-          pwd && ls -lash
-      - name: eslint
-        run: |
-          sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install curl -y
-          curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-          echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-          sudo apt-get install yarn -y
-          yarn --version
-          yarn install && yarn audit && npx eslint webserver.js
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js and Yarn
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run ESLint
+        run: npx eslint .
