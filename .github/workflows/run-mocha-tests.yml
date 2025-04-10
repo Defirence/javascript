@@ -22,14 +22,6 @@ jobs:
                 node-version: '20'
                 cache: 'yarn'
 
-            - name: Verify `yarn.lock` exists
-              working-directory: javascript/node-express-server
-              run: |
-                if [ ! -f yarn.lock ]; then
-                  echo "Error: yarn.lock file is missing in node-express-server directory"
-                  exit 1
-                fi
-
             - name: Install dependencies
               working-directory: javascript/node-express-server
               run: yarn install
