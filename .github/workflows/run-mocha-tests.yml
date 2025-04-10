@@ -16,16 +16,20 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v3
               with:
-                # Specify the subdirectory path where the repository should be checked out
-                path: node-express-server      
+                path: node-express-server
 
             - name: Set up Node.js
               uses: actions/setup-node@v3
               with:
-                # Using Node.js version 20 for compatibility with the project dependencies and JSHint.
                 node-version: '20'
-                # Caches dependencies for Yarn to speed up workflow execution
                 cache: 'yarn'
+
+            - name: Verify `yarn.lock` exists
+              run: |
+                if [ ! -f node-express-server/yarn.lock ]; then
+                  echo "Error: yarn.lock file is missing in node-express-server directory"
+                  exit 1
+                fi
 
             - name: Install dependencies
               run: yarn install
