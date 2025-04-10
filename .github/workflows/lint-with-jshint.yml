@@ -26,6 +26,6 @@ jobs:
               working-directory: node-express-server
               run: yarn install
 
-            - name: Run Mocha tests
+            - name: Run JSHint lint
               working-directory: node-express-server
               run: npx jshint webserver.js
