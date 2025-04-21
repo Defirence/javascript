@@ -30,7 +30,6 @@ app.post('/', (req, res) => {
 
 app.put('/user', (req, res) => {
   try {
-    const userAgent = new UserAgents().toString();
     // Ensure the request body is parsed and simulate an error if requested
     if (req.body && req.body.simulateError) {
       throw new Error('Simulated server error');
