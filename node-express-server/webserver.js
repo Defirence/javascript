@@ -18,9 +18,9 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
+  const userAgent = new UserAgents().toString();
   res.status(200).json({ message: 'Hello Express!' }); // Respond with JSON
-  console.log(`Received GET request to the API with userAgent:`);
-  console.log(userAgent.toString());
+  console.log(`Received GET request to the API with userAgent: ${userAgent}`);
 });
 
 app.post('/', (req, res) => {
@@ -30,13 +30,13 @@ app.post('/', (req, res) => {
 
 app.put('/user', (req, res) => {
   try {
+    const userAgent = new UserAgents().toString();
     // Ensure the request body is parsed and simulate an error if requested
     if (req.body && req.body.simulateError) {
       throw new Error('Simulated server error');
     }
     res.status(200).json({ message: 'Resource updated successfully' });
-    console.log(`Received PUT request from port: ${port} to ${dir}userAgent:`);
-    console.log(userAgent.toString());
+    console.log(`Received PUT request from port: ${port} to ${dir} userAgent: ${userAgent}`);
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' }); // Handle server error
     console.error('Error occurred on PUT /user:', error.message);
@@ -44,9 +44,9 @@ app.put('/user', (req, res) => {
 });
 
 app.delete('/user', (req, res) => {
+  const userAgent = new UserAgents().toString();
   res.status(204).send(); // Respond with 204 for successful deletion
-  console.log(`Received DELETE request from port: ${port} to ${dir}userAgent:`);
-  console.log(userAgent.toString());
+  console.log(`Received DELETE request from port: ${port} to ${dir} userAgent: ${userAgent}`);
 });
 
 // POST /user route
