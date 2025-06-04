@@ -1,0 +1,20 @@
+{
+  "name": "node-express-server",
+  "version": "0.0.1",
+  "description": "A simple node.js express server with some simple logging features.",
+  "main": "webserver.js",
+  "repository": "https://github.com/Defirence/javascript/tree/main/boiler-plate/node-express-server",
+  "author": "Defirence",
+  "license": "CC0-Universal",
+  "dependencies": {
+    "express": "^5.1.0",
+    "supertest": "^7.1.0",
+    "user-agents": "^1.1.502"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.14.0",
+    "jshint": "^2.13.6",
+    "mocha": "^11.1.0",
+    "sinon": "^20.0.0"
+  }
+}
