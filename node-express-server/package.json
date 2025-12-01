@@ -7,7 +7,7 @@
   "author": "Defirence",
   "license": "CC0-Universal",
   "dependencies": {
-    "express": "^5.1.0",
+    "express": "^5.2.0",
     "supertest": "^7.1.0",
     "user-agents": "^1.1.502"
   },
